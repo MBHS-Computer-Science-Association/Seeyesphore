@@ -21,7 +21,8 @@ getHomeR = do
         let (commentFormId, commentTextareaId, commentListId) = commentIds
         aDomId <- newIdent
         setTitle "Welcome To Yesod!"
-        $(widgetFile "homepage")
+        -- This widgetFile has been changed to the newhome temporarily.
+        $(widgetFile "newhome")
 
 postHomeR :: Handler Html
 postHomeR = do

@@ -1,0 +1,10 @@
+<.ui.container>
+  <.ui.secondary.menu>
+    <a.active.item>
+      This is stupid.
+    <a.item>
+      This is weird.
+    <a.item>
+      This is cool.
+  <.ui.raised.segment.container>
+    <h1.ui.header> MISD STEM-Humanities Program 

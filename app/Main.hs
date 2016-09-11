@@ -1,5 +1,7 @@
-import Prelude     (IO)
+import Prelude     (IO, putStrLn)
 import Application (appMain)
 
 main :: IO ()
-main = appMain
+main = do
+    putStrLn "Seeyesphore has started."
+    appMain

@@ -6,6 +6,8 @@
 
 / HomeR GET POST
 
+/login LoginPageR GET
+
 /comments CommentR POST
 
 /profile ProfileR GET

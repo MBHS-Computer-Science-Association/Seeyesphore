@@ -1,10 +1,3 @@
-<.ui.container>
-  <.ui.secondary.menu>
-    <a.active.item>
-      This is stupid.
-    <a.item>
-      This is weird.
-    <a.item>
-      This is cool.
-  <.ui.raised.segment.container>
-    <h1.ui.header> MISD STEM-Humanities Program 
+<.ui.segment>
+    <h2.ui.header>Our Mission
+    <p>We are changing the sphere of STEM by emphasizing the importance of multidisciplinary research and real softskills in teamwork. This past year, some of the brightest McKinney Boyd High School students from several different areas of academic foci mentors and established connections with elementary school ALPHA students in order to help them with their project.

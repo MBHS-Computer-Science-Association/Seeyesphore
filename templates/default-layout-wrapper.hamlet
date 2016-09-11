@@ -1,6 +1,7 @@
--- The following line is supposed to make it so that Hamlet
--- never adds new lines after inline tags.
--- $newline never
+$# The following line is supposed to make it so that Hamlet
+$# never adds new lines after inline tags.
+$# $newline never
+
 $doctype 5
 \<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 \<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -22,9 +23,6 @@ $doctype 5
     \<!--[if lt IE 9]>
     \<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     \<![endif]-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.min.js">
-
     <script>
       /* The `defaultCsrfMiddleware` Middleware added in Foundation.hs adds a CSRF token the request cookies. */
       /* AJAX requests should add that token to a header to be validated by the server. */
@@ -52,17 +50,20 @@ $doctype 5
       <header>
           <h1.ui.header>MISD STEM-Humanities Program
       <.ui.secondary.pointing.menu>
-          <a.item>Overview
-          <a.item>About
-          <a.item>Blogs
-          <a.item>Showcase
+          <a.item href=@{HomeR}>Overview
+          <a.disabled.item>About
+          <a.disabled.item>Blogs
+          <a.disabled.item>Showcase
           <.right.menu>
-              <a.item>Login 
+              <a.item href=@{LoginPageR}>Login 
 
       ^{pageBody pc}
       
       <footer.ui.middle.aligned.center.aligned.grid>
         #{appCopyright $ appSettings master}
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.0.3/js.cookie.min.js">
 
     $maybe analytics <- appAnalytics $ appSettings master
       <script>

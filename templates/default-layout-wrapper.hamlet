@@ -1,5 +1,7 @@
-$newline never
-\<!doctype html>
+-- The following line is supposed to make it so that Hamlet
+-- never adds new lines after inline tags.
+-- $newline never
+$doctype 5
 \<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 \<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 \<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
@@ -9,6 +11,7 @@ $newline never
     <meta charset="UTF-8">
 
     <title>#{pageTitle pc}
+
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -42,12 +45,23 @@ $newline never
 
     <script>
       document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+
+
   <body>
     <.ui.container>
       <header>
-      <div id="main" role="main">
-        ^{pageBody pc}
-      <footer>
+          <h1.ui.header>MISD STEM-Humanities Program
+      <.ui.secondary.pointing.menu>
+          <a.item>Overview
+          <a.item>About
+          <a.item>Blogs
+          <a.item>Showcase
+          <.right.menu>
+              <a.item>Login 
+
+      ^{pageBody pc}
+      
+      <footer.ui.middle.aligned.center.aligned.grid>
         #{appCopyright $ appSettings master}
 
     $maybe analytics <- appAnalytics $ appSettings master

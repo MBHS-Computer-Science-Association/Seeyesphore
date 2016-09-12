@@ -25,6 +25,7 @@ library
                      Handler.Comment
                      Handler.Profile
                      Handler.LoginPage
+                     Handler.Submit
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

@@ -1,13 +1,11 @@
-<form.ui.form>
-    <.ui.segment>
-        <.field>
-            <label>Content
-            <textarea placeholder="Type your blog post here." type=text>
-        <.field>
-            <label>Embedding Tweets
-            /<input placeholder="Tweet URLs" type=text>
-        <.field>
-            <label>Embedding YouTube Videos
-            /<input placeholder="YouTube URLs" type=text>
-        <.ui.fluid.submit.button>
-            Submit
+<form.ui.form.segment>
+    <.field>
+        <label>Content
+        <textarea placeholder="Type your blog post here." type=text>
+    <.field>
+        <label>Embedding Tweets
+        <input placeholder="Tweet URLs" type=text>
+    <.field>
+        <label>Embedding YouTube Videos
+        <input placeholder="YouTube URLs" type=text>
+    <.ui.fluid.submit.button> Submit

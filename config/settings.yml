@@ -32,5 +32,5 @@ database:
   database: "_env:MYSQL_DATABASE:stemhumanities"
   poolsize: "_env:MYSQL_POOLSIZE:100"
 
-copyright: Insert copyright statement here
+copyright: Designed and developed by Thai Nguyen and Sammy Shin 
 #analytics: UA-YOURCODE

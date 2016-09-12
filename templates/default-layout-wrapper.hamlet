@@ -53,7 +53,7 @@ $doctype 5
           <a.item href=@{HomeR}>Overview
           <a.item href=@{AboutR}>About
           <a.disabled.item>Blogs
-          <a.disabled.item>Showcase
+          <a.item href=@{ShowcaseR}>Showcase
           <.right.menu>
               <a.item href=@{LoginPageR}>Login 
 

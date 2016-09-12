@@ -9,6 +9,7 @@
 /login LoginPageR GET
 /submit SubmitR GET
 /about AboutR GET
+/showcase ShowcaseR GET
 
 /comments CommentR POST
 

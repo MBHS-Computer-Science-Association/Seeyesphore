@@ -27,6 +27,7 @@ library
                      Handler.LoginPage
                      Handler.Submit
                      Handler.About
+                     Handler.Showcase
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

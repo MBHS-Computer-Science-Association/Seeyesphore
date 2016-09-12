@@ -99,6 +99,7 @@ instance Yesod App where
     isAuthorized LoginPageR _ = return Authorized
     isAuthorized SubmitR _ = return Authorized
     isAuthorized AboutR _ = return Authorized
+    isAuthorized ShowcaseR _ = return Authorized
 
     isAuthorized ProfileR _ = isAuthenticated
 

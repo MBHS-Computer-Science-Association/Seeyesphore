@@ -23,12 +23,3 @@ client_session_key.aes
 .DS_Store
 *.swp
 *.keter
-
-
-# NPM
-npm-debug.log
-
-# Semantic-UI
-static/node_modules
-static/semantic/dist
-static/semantic/tasks

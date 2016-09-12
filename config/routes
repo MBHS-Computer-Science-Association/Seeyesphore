@@ -8,6 +8,7 @@
 
 /login LoginPageR GET
 /submit SubmitR GET
+/about AboutR GET
 
 /comments CommentR POST
 

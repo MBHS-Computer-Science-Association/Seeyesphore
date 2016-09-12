@@ -51,7 +51,7 @@ $doctype 5
           <h1.ui.header>MISD STEM-Humanities Program
       <.ui.secondary.pointing.menu>
           <a.item href=@{HomeR}>Overview
-          <a.disabled.item>About
+          <a.item href=@{AboutR}>About
           <a.disabled.item>Blogs
           <a.disabled.item>Showcase
           <.right.menu>

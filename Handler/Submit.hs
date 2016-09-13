@@ -7,3 +7,7 @@ getSubmitR = do
     defaultLayout $ do
         setTitle "Blog Post Submission"
         $(widgetFile "submit")
+
+postSubmitR :: Handler ()
+postSubmitR = do
+    redirect SubmitR

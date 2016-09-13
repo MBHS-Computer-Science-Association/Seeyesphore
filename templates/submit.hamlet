@@ -1,4 +1,4 @@
-<form.ui.form.segment>
+<form.ui.form.segment method=post>
     <.field>
         <label>Content
         <textarea placeholder="Type your blog post here." type=text>
@@ -8,4 +8,4 @@
     <.field>
         <label>Embedding YouTube Videos
         <input placeholder="YouTube URLs" type=text>
-    <.ui.fluid.submit.button> Submit
+    <button.ui.fluid.button type=submit> Submit

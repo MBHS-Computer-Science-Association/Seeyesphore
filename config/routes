@@ -7,7 +7,7 @@
 / HomeR GET POST
 
 /login LoginPageR GET
-/submit SubmitR GET
+/submit SubmitR GET POST
 /about AboutR GET
 /showcase ShowcaseR GET
 

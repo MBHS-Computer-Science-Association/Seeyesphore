@@ -1,7 +1,10 @@
 <form.ui.form.segment method=post>
     <.field>
+        <label>Title
+        <input placeholder="Some sort of creative title" type=text name=title>
+    <.field>
         <label>Content
-        <textarea placeholder="Type your blog post here." type=text>
+        <textarea placeholder="Type your blog post here." type=text name=content>
     <.field>
         <label>Embedding Tweets
         <input placeholder="Tweet URLs" type=text>

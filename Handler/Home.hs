@@ -14,4 +14,4 @@ getHomeR = do
     defaultLayout $ do
         setTitle "Welcome To Yesod!"
         -- This widgetFile has been changed to the newhome temporarily.
-        $(widgetFile "newhome")
+        $(widgetFile "home")

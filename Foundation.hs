@@ -99,6 +99,7 @@ instance Yesod App where
     isAuthorized SubmitR _ = return Authorized
     isAuthorized AboutR _ = return Authorized
     isAuthorized ShowcaseR _ = return Authorized
+    isAuthorized BlogR _ = return Authorized
 
     -- This function creates static content files in the static folder
     -- and names them based on a hash of their content. This allows

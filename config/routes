@@ -10,3 +10,4 @@
 /submit SubmitR GET POST
 /about AboutR GET
 /showcase ShowcaseR GET
+/dashboard DashboardR GET 

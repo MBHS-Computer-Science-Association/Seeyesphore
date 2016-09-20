@@ -22,8 +22,6 @@ library
                      Settings.StaticFiles
                      Handler.Common
                      Handler.Home
-                     Handler.Comment
-                     Handler.Profile
                      Handler.LoginPage
                      Handler.Submit
                      Handler.About

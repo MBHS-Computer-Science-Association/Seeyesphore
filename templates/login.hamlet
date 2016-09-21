@@ -4,9 +4,9 @@
             <.field>
                 <.ui.left.icon.input>
                     <i.user.icon>
-                    <input placeholder="Username" type=text>
+                    <input placeholder="Username" type=text name=username>
             <.field>
                 <.ui.left.icon.input>
                     <i.lock.icon>
-                    <input placeholder="Password" type=password>
+                    <input placeholder="Password" type=password name=password>
             <.ui.fluid.submit.button>Login

@@ -27,6 +27,7 @@ library
                      Handler.About
                      Handler.Showcase
                      Handler.Blog
+                     Handler.Dashboard
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

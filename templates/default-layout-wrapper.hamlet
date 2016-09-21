@@ -52,7 +52,7 @@ $doctype 5
       <.ui.secondary.pointing.menu>
           <a.item href=@{HomeR}>Overview
           <a.item href=@{AboutR}>About
-          <a.disabled.item>Blogs
+          <a.item href=@{BlogR}>Blogs
           <a.item href=@{ShowcaseR}>Showcase
           <.right.menu>
               <a.item href=@{LoginPageR}>Login 

@@ -26,6 +26,7 @@ library
                      Handler.Submit
                      Handler.About
                      Handler.Showcase
+                     Handler.Blog
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT

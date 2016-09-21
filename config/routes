@@ -11,3 +11,4 @@
 /about AboutR GET
 /showcase ShowcaseR GET
 /dashboard DashboardR GET 
+/blog BlogR GET

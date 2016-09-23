@@ -5,10 +5,10 @@ import Database.Persist.Sql (ConnectionPool, runSqlPool)
 import Text.Hamlet          (hamletFile)
 import Text.Jasmine         (minifym)
 
--- Used only when in "auth-dummy-login" setting is enabled.
-import Yesod.Auth.Dummy
+-- AUTH SECTION
+import Yesod.Auth.HashDB
+import Yesod.Auth.Message           (AuthMessage (InvalidLogin))
 
-import Yesod.Auth.OpenId    (authOpenId, IdentifierType (Claimed))
 import Yesod.Default.Util   (addStaticContentExternal)
 import Yesod.Core.Types     (Logger)
 import qualified Yesod.Core.Unsafe as Unsafe
@@ -106,7 +106,6 @@ instance Yesod App where
             Nothing -> Unauthorized "You must login to access this page"
             Just _ -> Authorized
 
-
     -- This function creates static content files in the static folder
     -- and names them based on a hash of their content. This allows
     -- expiration dates to be set far in the future without worry of
@@ -148,27 +147,29 @@ instance YesodAuth App where
     type AuthId App = UserId
 
     -- Where to send a user after successful login
-    loginDest _ = HomeR
+    loginDest _ = DashboardR 
     -- Where to send a user after logout
     logoutDest _ = HomeR
+
+    -- Optional definition
     -- Override the above two destinations when a Referer: header is present
     redirectToReferer _ = True
 
     authenticate creds = runDB $ do
         x <- getBy $ UniqueUser $ credsIdent creds
         case x of
-            Just (Entity uid _) -> return $ Authenticated uid
-            Nothing -> Authenticated <$> insert User
-                { userIdent = credsIdent creds
-                , userPassword = Nothing
-                }
+            Just (Entity uid _) -> do
+                return $ Authenticated uid
+            Nothing -> do
+                return $ UserError InvalidLogin 
 
-    -- You can add other plugins like Google Email, email or OAuth here
-    authPlugins app = [authOpenId Claimed []] ++ extraAuthPlugins
-        -- Enable authDummy login if enabled.
-        where extraAuthPlugins = [authDummy | appAuthDummyLogin $ appSettings app]
+    authPlugins _ = [authHashDBWithForm loginForm (Just . UniqueUser)]
 
     authHttpManager = getHttpManager
+
+loginForm :: Route App -> Widget
+loginForm action = $(whamletFile "templates/login.hamlet")
+
 
 instance YesodAuthPersist App
 

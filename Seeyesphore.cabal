@@ -22,7 +22,6 @@ library
                      Settings.StaticFiles
                      Handler.Common
                      Handler.Home
-                     Handler.LoginPage
                      Handler.Submit
                      Handler.About
                      Handler.Showcase
@@ -61,6 +60,7 @@ library
                  , yesod                         >= 1.4.3      && < 1.5
                  , yesod-core                    >= 1.4.17     && < 1.5
                  , yesod-auth                    >= 1.4.0      && < 1.5
+                 , yesod-auth-hashdb             >= 1.5.1.2
                  , yesod-static                  >= 1.4.0.3    && < 1.6
                  , yesod-form                    >= 1.4.0      && < 1.5
                  , classy-prelude                >= 0.10.2

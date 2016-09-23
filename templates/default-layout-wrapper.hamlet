@@ -55,7 +55,7 @@ $doctype 5
           <a.item href=@{BlogR}>Blogs
           <a.item href=@{ShowcaseR}>Showcase
           <.right.menu>
-              <a.item href=@{LoginPageR}>Login 
+              <a.item href=@{AuthR LoginR}>Login 
 
       ^{pageBody pc}
       

@@ -11,4 +11,10 @@ getSubmitR = do
 postSubmitR :: Handler ()
 postSubmitR = do
     -- Needs work!
+    -- redirect SubmitR
+    -- let engPost = EnglishPost "This is my title" "This is my post."
+    engPost <- runInputPost $ EnglishPost
+                   <$> ireq textField "title"
+                   <*> ireq textField "content"
+    _ <- runDB $ insertEntity engPost
     redirect SubmitR

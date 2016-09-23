@@ -15,21 +15,14 @@ postSubmitR = do
     -- Needs work!
     -- redirect SubmitR
     -- let engPost = EnglishPost "This is my title" "This is my post."
-<<<<<<< Updated upstream
-    -- engPost <- runInputPost $ EnglishPost
+    --tempUser <- runInputPost $ User 
     --                <$> ireq textField "title"
-    --                <*> ireq textField "content"
-    -- _ <- runDB $ insertEntity engPost
-=======
-    tempUser <- runInputPost $ User 
-                    <$> ireq textField "title"
-                    <*> iopt textField "content"
+    --                <*> iopt textField "content"
 
-    let realUser = User (userIdent tempUser) Nothing
-    userP <- setPassword (fromMaybe "" (userPassword tempUser)) realUser
-    _ <- runDB $ insertBy userP
+    --let realUser = User (userIdent tempUser) Nothing
+    --userP <- setPassword (fromMaybe "" (userPassword tempUser)) realUser
+    --_ <- runDB $ insertBy userP
 
-    _ <- runDB $ insertEntity tempUser 
+    --_ <- runDB $ insertEntity tempUser 
 
->>>>>>> Stashed changes
     redirect SubmitR

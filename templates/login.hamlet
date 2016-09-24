@@ -1,5 +1,5 @@
 <.ui.three.column.centered.grid>
-    <form.ui.column.form>
+    <form.ui.column.form method=post action=@{action}>
         <.ui.segment>
             <.field>
                 <.ui.left.icon.input>
@@ -9,4 +9,4 @@
                 <.ui.left.icon.input>
                     <i.lock.icon>
                     <input placeholder="Password" type=password name=password>
-            <.ui.fluid.submit.button>Login
+            <button.ui.fluid.button type=submit>Login

@@ -2,4 +2,12 @@ User
     ident Text
     password Text Maybe
     UniqueUser ident
+    deriving Show
+    deriving Typeable
+
+BlogPost
+    date Day 
+    user_id UserId
+    title Text
+    content Text
     deriving Typeable

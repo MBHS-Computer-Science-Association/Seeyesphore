@@ -1,2 +1,6 @@
 <.ui.segment>
     <h2.ui.header>Main Blog
+$forall Entity _ (BlogPost date user title content) <- posts 
+    <.ui.segment>
+        <h3.ui.header>#{title}
+        <p>#{content}

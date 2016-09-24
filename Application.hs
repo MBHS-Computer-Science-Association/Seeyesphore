@@ -35,7 +35,6 @@ import System.Log.FastLogger                (defaultBufSize, newStdoutLoggerSet,
 import Handler.Common
 import Handler.Home
 
-import Handler.LoginPage
 import Handler.Submit
 import Handler.About
 import Handler.Showcase

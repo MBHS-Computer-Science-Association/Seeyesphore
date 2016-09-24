@@ -28,6 +28,7 @@ library
                      Handler.Showcase
                      Handler.Blog
                      Handler.Dashboard
+                     Handler.Register
 
     if flag(dev) || flag(library-only)
         cpp-options:   -DDEVELOPMENT
@@ -114,6 +115,7 @@ test-suite test
                        Handler.HomeSpec
                        Handler.ProfileSpec
                        Handler.Dashboard
+                       Handler.Register
                        TestImport
     hs-source-dirs:    test
     ghc-options:       -Wall

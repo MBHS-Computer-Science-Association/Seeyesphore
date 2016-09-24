@@ -12,17 +12,15 @@ getSubmitR = do
 
 postSubmitR :: Handler ()
 postSubmitR = do
-    -- Needs work!
-    -- redirect SubmitR
-    -- let engPost = EnglishPost "This is my title" "This is my post."
-    --tempUser <- runInputPost $ User 
-    --                <$> ireq textField "title"
-    --                <*> iopt textField "content"
-
-    --let realUser = User (userIdent tempUser) Nothing
-    --userP <- setPassword (fromMaybe "" (userPassword tempUser)) realUser
-    --_ <- runDB $ insertBy userP
-
-    --_ <- runDB $ insertEntity tempUser 
-
-    redirect SubmitR
+    date <- liftIO $ getCurrentTime
+    muid <- maybeAuthId
+    title <- runInputPost $ ireq textField "title"
+    content <- runInputPost $ ireq textField "content"
+    
+    case muid of
+        Nothing -> do
+            setMessage "You are not logged in!"
+            redirect SubmitR 
+        Just uid -> do
+            runDB $ insertEntity $ BlogPost date uid title content
+            redirect SubmitR

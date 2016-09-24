@@ -4,3 +4,10 @@ User
     UniqueUser ident
     deriving Show
     deriving Typeable
+
+BlogPost
+    date UTCTime
+    user_id UserId
+    title Text
+    content Text
+    deriving Typeable

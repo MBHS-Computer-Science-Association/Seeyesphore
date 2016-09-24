@@ -6,7 +6,7 @@ User
     deriving Typeable
 
 BlogPost
-    date UTCTime
+    date Day 
     user_id UserId
     title Text
     content Text

@@ -55,7 +55,11 @@ $doctype 5
           <a.item href=@{BlogR}>Blogs
           <a.item href=@{ShowcaseR}>Showcase
           <.right.menu>
-              <a.item href=@{AuthR LoginR}>Login 
+              $maybe Entity _ user <- muser
+                  <a.item href=@{SubmitR}>Submit
+                  <a.item href=@{AuthR LogoutR}>Logout
+              $nothing
+                  <a.item href=@{AuthR LoginR}>Login 
 
       ^{pageBody pc}
       

@@ -1,4 +1,4 @@
-<.form.ui.segment.form method=post>
+<form.ui.segment.form method=post>
     <.field>
         <label>Email
         <input placeholder="Ex. johnsmith@mymail.com" type=text name=email>

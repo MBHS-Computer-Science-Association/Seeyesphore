@@ -2,13 +2,13 @@ module Handler.Register where
 
 import Import
 
-postRegisterR :: Handler Html
-postRegisterR = do
+getRegisterR :: Handler Html
+getRegisterR = do
         defaultLayout $ do
-        setTitle "Humanities Login Page"
+        setTitle "New User Registration"
         $(widgetFile "register")
 
 
-getRegisterR :: Handler Html 
-getRegisterR = error "Not yet implemented: postRegisterR"
+postRegisterR :: Handler Html 
+postRegisterR = error "Not yet implemented: postRegisterR"
 

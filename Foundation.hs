@@ -96,18 +96,12 @@ instance Yesod App where
     isAuthorized FaviconR _ = return Authorized
     isAuthorized RobotsR _ = return Authorized
     isAuthorized (StaticR _) _ = return Authorized
-    isAuthorized SubmitR _ = return Authorized
     isAuthorized AboutR _ = return Authorized
     isAuthorized ShowcaseR _ = return Authorized
     isAuthorized BlogR _ = return Authorized
-    isAuthorized RegisterR _ = return Authorized  -- isAuthenticated
+    isAuthorized SubmitR _ = isAuthenticated 
+    isAuthorized RegisterR _ = isAuthenticated 
     isAuthorized DashboardR _ = isAuthenticated 
-
-    isAuthorized DashboardR _ = do 
-        muid <- maybeAuthId
-        return $ case muid of
-            Nothing -> Unauthorized "You must login to access this page"
-            Just _ -> Authorized
 
     -- This function creates static content files in the static folder
     -- and names them based on a hash of their content. This allows
@@ -136,6 +130,15 @@ instance Yesod App where
             || level == LevelError
 
     makeLogger = return . appLogger
+
+isAuthenticated :: Handler AuthResult
+isAuthenticated = do
+    muid <- maybeAuthId
+    return $ case muid of
+        Nothing -> Unauthorized "You must login to access this page"
+        Just _ -> Authorized
+
+
 
 -- How to run database actions.
 instance YesodPersist App where

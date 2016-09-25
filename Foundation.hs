@@ -101,7 +101,7 @@ instance Yesod App where
     isAuthorized ShowcaseR _ = return Authorized
     isAuthorized BlogR _ = return Authorized
     isAuthorized RegisterR _ = return Authorized  -- isAuthenticated
-    isAuthorized DashboardR _ = isAuthenticated 
+    isAuthorized DashboardR _ = return Authorized 
 
     isAuthorized DashboardR _ = do 
         muid <- maybeAuthId

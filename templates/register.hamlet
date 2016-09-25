@@ -1,8 +1,8 @@
-.form.segment method=post>
+<.form.segment method=post>
     <.field>
         <label>Email
         <input placeholder="Ex. johnsmith@mymail.com" type=text name=email>
     <.field>
         <label>Password
-        <textarea placeholder="Ex. 'hunter2'" type=password name=password>
+        <input placeholder="Ex. 'hunter2'" type=password name=password>
     <button.ui.fluid.button type=submit> Submit

@@ -1,14 +1,20 @@
 module Handler.Register where
 
 import Import
+import Yesod.Auth.HashDB
 
-postRegisterR :: Handler Html
-postRegisterR = do
+getRegisterR :: Handler Html
+getRegisterR = do
         defaultLayout $ do
-        setTitle "Humanities Login Page"
+        setTitle "New User Registration"
         $(widgetFile "register")
 
-
-getRegisterR :: Handler Html 
-getRegisterR = error "Not yet implemented: postRegisterR"
-
+postRegisterR :: Handler Html
+postRegisterR = do 
+    email <- runInputPost $ ireq textField "email"
+    password <- runInputPost $ ireq textField "password"
+    let user = User email Nothing
+    userP <- setPassword password user
+    _ <- runDB $ insertBy $ userP
+    setMessage "User created."
+    redirect RegisterR

@@ -2,8 +2,6 @@ module Handler.Submit where
 
 import Import
 
-import Yesod.Auth.HashDB
-
 getSubmitR :: Handler Html
 getSubmitR = do
     defaultLayout $ do

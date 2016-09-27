@@ -3,4 +3,8 @@ module Handler.Dashboard where
 import Import
 
 getDashboardR :: Handler Html
-getDashboardR = error "Not yet implemented: getDashboardR"
+getDashboardR = do 
+    posts <- runDB $ selectList [] []
+    defaultLayout $ do
+        setTitle "Dashboard"
+        $(widgetFile "dashboard")

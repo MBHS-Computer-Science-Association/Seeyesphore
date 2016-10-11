@@ -18,7 +18,7 @@ postSubmitR = do
     case muid of
         Nothing -> do
             setMessage "You are not logged in!"
-            redirect SubmitR 
+            redirect SubmitR
         Just uid -> do
             runDB $ insertEntity $ BlogPost (utctDay date) uid title content
             redirect SubmitR

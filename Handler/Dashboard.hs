@@ -8,3 +8,7 @@ getDashboardR = do
         setTitle "About STEM Humanities"
         $(widgetFile "dashboard")
 
+    posts <- runDB $ selectList [] []
+    defaultLayout $ do
+        setTitle "Dashboard"
+        $(widgetFile "dashboard")

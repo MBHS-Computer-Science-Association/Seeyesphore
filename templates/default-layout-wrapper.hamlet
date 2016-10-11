@@ -57,7 +57,6 @@ $doctype 5
           <.right.menu>
               $maybe Entity _ user <- muser
                   <a.item href=@{DashboardR}>Dashboard
-                  <a.item href=@{SubmitR}>Submit
                   <a.item href=@{AuthR LogoutR}>Logout
               $nothing
                   <a.item href=@{AuthR LoginR}>Login 

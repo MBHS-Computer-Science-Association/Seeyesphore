@@ -1,8 +1,8 @@
 <.ui.segment>
     <h2.ui.header>Dashboard
         <.ui.positive.basic.right.floated.button>
-           <a. item href=@{SubmitR}>Create Post
-$forall Entity _ (BlogPost date user title content) <- posts
-    <.ui.segment>
+           <a.item href=@{SubmitR}>Create Post
+ $forall Entity _ (BlogPost date user title content) <- posts
+     <.ui.segment>
         <h3.ui.header>#{title}
         <p>#{content}

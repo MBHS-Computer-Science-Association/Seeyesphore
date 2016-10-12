@@ -9,6 +9,6 @@
 /submit SubmitR GET POST
 /about AboutR GET
 /showcase ShowcaseR GET
-/dashboard DashboardR GET 
+/dashboard DashboardR GET  
 /blog BlogR GET
 /register RegisterR GET POST

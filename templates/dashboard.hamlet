@@ -1,9 +1,8 @@
 <.ui.basic.segment>
     <h2.ui.header>Dashboard
-        <.ui.right.floated.button>
-           <a.item href=@{SubmitR}>Create Post
+        <button.ui.green.right.floated.button onclick="location.href=@{SubmitR}">Create Post
  $forall Entity _ (BlogPost date user title content) <- posts
-     <.ui.segment>
+     <.ui.green.segment>
         <h3.ui.left.floated.header>#{title}
         <h5.ui.grey.right.floated.header>date_goes_here
         <.ui.clearing.divider>

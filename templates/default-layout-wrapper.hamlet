@@ -48,9 +48,8 @@ $doctype 5
   <body>
     <.ui.container>
       <header>
-          <h1.ui.header>MISD STEM-Humanities Program
       <.ui.secondary.pointing.menu>
-          <a.item href=@{HomeR}>Overview
+          <a.item.header href=@{HomeR}>MISD Stem Humanities
           <a.item href=@{AboutR}>About
           <a.item href=@{BlogR}>Blogs
           <a.item href=@{ShowcaseR}>Showcase

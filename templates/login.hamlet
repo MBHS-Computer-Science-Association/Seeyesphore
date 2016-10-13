@@ -2,11 +2,13 @@
     <form.ui.column.form method=post action=@{action}>
         <.ui.segment>
             <.field>
-                <.ui.left.icon.input>
-                    <i.user.icon>
-                    <input placeholder="Username" type=text name=username>
+               <label>Username
+                 <.ui.left.icon.input>
+                     <i.user.icon>
+                     <input placeholder="Username" type=text name=username>
             <.field>
-                <.ui.left.icon.input>
+               <label>Password
+                 <.ui.left.icon.input>
                     <i.lock.icon>
                     <input placeholder="Password" type=password name=password>
             <button.ui.fluid.button type=submit>Login

@@ -1,4 +1,4 @@
-<form.ui.form.segment method=post>
+<form.ui.green.form.segment method=post>
     <.field>
         <label>Title
         <input placeholder="Some sort of creative title" type=text name=title>
@@ -7,8 +7,12 @@
         <textarea placeholder="Type your blog post here." type=text name=content>
     <.field>
         <label>Embedding Tweets
-        <input placeholder="Tweet URLs" type=text>
+        <.ui.left.icon.input>
+            <i.twitter.icon>
+            <input placeholder="Tweet URLs" type=text>
     <.field>
         <label>Embedding YouTube Videos
-        <input placeholder="YouTube URLs" type=text>
-    <button.ui.fluid.button type=submit> Submit
+        <.ui.left.icon.input>
+            <i.film.icon>
+            <input placeholder="YouTube URLs" type=text>
+    <button.ui.green.fluid.button type=submit> Submit

@@ -1,6 +1,6 @@
 <.ui.basic.segment>
     <h2.ui.header>Dashboard
-        <button.ui.green.right.floated.button onclick="location.href=@{SubmitR}">Create Post
+        <button.ui.green.right.floated.button onclick="location.href='@{SubmitR}'">Create Post
  $forall Entity _ (BlogPost date user title content) <- posts
      <.ui.green.segment>
         <h3.ui.left.floated.header>#{title}

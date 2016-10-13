@@ -10,7 +10,7 @@ getSubmitR = do
 
 postSubmitR :: Handler ()
 postSubmitR = do
-    date <- liftIO $ getCurrentTime
+    date <- liftIO getCurrentTime
     muid <- maybeAuthId
     title <- runInputPost $ ireq textField "title"
     content <- runInputPost $ ireq textField "content"
